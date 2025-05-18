@@ -85,9 +85,9 @@ MO1/MO2: hold to activate layer 1/2.
 ## vscode shortcut
 
 ```
-|      |      |      |      |      |  |  win | home |  up  |  end | pgup |
-|      |      |      | find | goto |  | bckt | left | down | rght | pgdn |
-|   z  |   x  |   c  |   v  |      |  | crsr | prev | hint | next |  esc |
+|  win | home |  up  |  end | pgup |
+| bckt | left | down | rght | pgdn |
+| crsr | prev | hint | next |  esc |
 ```
 
 - one-hand navigation: most of navigation shortcut only use `layer1`, `alt` and the keys on the right hand.
