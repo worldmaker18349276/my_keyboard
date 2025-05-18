@@ -1,7 +1,7 @@
 [
     // [keymap]
     // |  win | home |  up  |  end | pgup |
-    // | bckt | left | down | rght | pgdn |
+    // | brkt | left | down | rght | pgdn |
     // | crsr | prev | hint | next |  esc |
 
     // [disable]

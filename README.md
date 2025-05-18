@@ -86,7 +86,7 @@ MO1/MO2: hold to activate layer 1/2.
 
 ```
 |  win | home |  up  |  end | pgup |
-| bckt | left | down | rght | pgdn |
+| brkt | left | down | rght | pgdn |
 | crsr | prev | hint | next |  esc |
 ```
 
