@@ -208,10 +208,10 @@
     // ============================================= TAB ===============================================
 
     // [tab]
-    // switch between tab (are designed for one-hand navigation)
+    // switch tab (are designed for one-hand navigation)
     { "key": "alt+pageup", "command": "workbench.action.previousEditorInGroup" },
     { "key": "alt+pagedown", "command": "workbench.action.nextEditorInGroup" },
-    // switch between tab (for compatibility)
+    // switch tab (for compatibility)
     { "key": "ctrl+pageup", "command": "workbench.action.previousEditorInGroup" },
     { "key": "ctrl+pagedown", "command": "workbench.action.nextEditorInGroup" },
     // // DUAL: ctrl+pageup/pagedown
@@ -228,14 +228,14 @@
     // { "key": "shift+ctrl+alt+p", "command": "workbench.action.moveEditorLeftInGroup" },
     // { "key": "shift+ctrl+alt+;", "command": "workbench.action.moveEditorRightInGroup" },
 
-    // switch between sidebar/panel (are designed for one-hand navigation)
+    // switch sidebar/panel (are designed for one-hand navigation)
     { "key": "alt+pageup", "command": "workbench.action.previousPanelView", "when": "panelFocus" },
     { "key": "alt+pageup", "command": "workbench.action.previousSideBarView", "when": "sideBarFocus" },
     { "key": "alt+pageup", "command": "workbench.action.previousPanelView", "when": "terminalFocus || terminalEditorFocus" },
     { "key": "alt+pagedown", "command": "workbench.action.nextPanelView", "when": "panelFocus" },
     { "key": "alt+pagedown", "command": "workbench.action.nextSideBarView", "when": "sideBarFocus" },
     { "key": "alt+pagedown", "command": "workbench.action.nextPanelView", "when": "terminalFocus || terminalEditorFocus" },
-    // switch between sidebar/panel (for compatibility)
+    // switch sidebar/panel (for compatibility)
     { "key": "ctrl+pageup", "command": "workbench.action.previousPanelView", "when": "panelFocus" },
     { "key": "ctrl+pageup", "command": "workbench.action.previousSideBarView", "when": "sideBarFocus" },
     { "key": "ctrl+pageup", "command": "workbench.action.previousPanelView", "when": "terminalFocus || terminalEditorFocus" },
@@ -257,7 +257,7 @@
     // { "key": "shift+alt+y", "command": "workbench.action.terminal.toggleTerminal", "when": "terminalFocus" },
 
     // [group]
-    // switch between group
+    // switch group
     { "key": "alt+End", "command": "workbench.action.focusNextGroup", "when": "multipleEditorGroups" },
     { "key": "alt+Home", "command": "workbench.action.focusPreviousGroup", "when": "multipleEditorGroups" },
     { "key": "alt+End", "command": "diffEditor.switchSide", "when": "!multipleEditorGroups && inDiffEditor && !diffEditorInlineMode" },
@@ -424,7 +424,9 @@
     { "key": "ctrl+shift+g", "command": "workbench.action.showAllSymbols" },
     // peek definition then reference (EXT: multiCommand)
     { "key": "ctrl+alt+g", "command": "editor.action.peekDefinition", "when": "editorFocus && editorHasReferenceProvider && !referenceSearchVisible" },
-    { "key": "ctrl+alt+g", "command": "multiCommand.triggerReferenceSearch", "when": "editorFocus && editorHasReferenceProvider && referenceSearchVisible" },
+    { "key": "ctrl+alt+g", "command": "extension.multiCommand.execute", "args": {
+        "sequence": [ "closeReferenceSearch", "editor.action.referenceSearch.trigger", ],
+    }, "when": "editorFocus && editorHasReferenceProvider && referenceSearchVisible" },
     // toggle focus of peek
     { "key": "alt+g", "command": "togglePeekWidgetFocus", "when": "editorFocus && referenceSearchVisible" },
 
@@ -435,9 +437,10 @@
     { "key": "shift+alt+f", "command": "editor.action.previousMatchFindAction", "when": "editorFocus" },
     // search reference
     { "key": "ctrl+alt+f", "command": "references-view.findReferences" },
-    // search editor
-    { "key": "alt+enter", "command": "multiCommand.openSearchResultInEditor", "when": "hasSearchResult && searchViewletFocus" },
+    // search editor (EXT: searchEditorApplyChanges)
+    { "key": "alt+enter", "command": "search.action.openInEditor", "when": "hasSearchResult && searchViewletFocus" },
     { "key": "ctrl+s", "command": "searchEditorApplyChanges.apply", "when": "inSearchEditor" },
+    { "key": "ctrl+w", "command": "workbench.action.closeActiveEditor", "when": "inSearchEditor" },
     { "key": "alt+f", "command": "search.action.focusNextSearchResult", "when": "searchViewletVisible || inSearchEditor" },
     { "key": "shift+alt+f", "command": "search.action.focusPreviousSearchResult", "when": "searchViewletVisible || inSearchEditor" },
 
@@ -448,15 +451,13 @@
     { "key": "ctrl+l", "command": "expandLineSelection", "when": "textInputFocus" },
     { "key": "ctrl+o", "command": "workbench.action.quickOpen", "when": "editorFocus" },
     { "key": "ctrl+d", "command": "editor.action.duplicateSelection" },
-    // new editor
+    // new/reopen editor
     { "key": "ctrl+t", "command": "workbench.action.files.newUntitledFile" },
-    // reopen editor
-    { "key": "ctrl+shift+t", "command": "workbench.action.reopenClosedEditor" },
+    { "key": "shift+ctrl+t", "command": "workbench.action.reopenClosedEditor" },
     // close editor (don't close editor on blur)
     { "key": "ctrl+w", "command": "workbench.action.closeActiveEditor", "when": "editorFocus" },
-    // focus terminal (ctrl+alt+t: open ubuntu terminal)
+    // focus/new terminal (ctrl+alt+t: open ubuntu terminal)
     { "key": "alt+t", "command": "workbench.action.terminal.focus", "when": "terminal.active" },
-    // new terminal
     { "key": "shift+alt+t", "command": "workbench.action.terminal.new", "when": "terminalProcessSupported || terminalWebExtensionContributedProfile" },
 
     // [others using extensions]
@@ -464,7 +465,6 @@
     { "key": "shift+ctrl+backspace", "command": "bracketeer.removeBrackets" },
     { "key": "ctrl+shift+d", "command": "extension.transpose", "when": "editorFocus" },
     { "key": "shift+ctrl+v", "command": "clipring.pasteRingItem", "when": "editorFocus && editorHasSelection" },
-    { "key": "shift+ctrl+v", "command": "multiCommand.pasteRingItemWithSelection", "when": "editorFocus && !editorHasSelection" },
     // { "key": "tab", "command": "yo1dog.cursor-align.alignCursors", "when": "editorTextFocus && !editorReadonly && editorHasMultipleSelections && editorHasSelection" },
 
     // [script]
