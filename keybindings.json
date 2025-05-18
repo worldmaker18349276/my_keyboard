@@ -1,0 +1,474 @@
+[
+    // [keymap]
+    // |  win | home |  up  |  end | pgup |
+    // | bckt | left | down | rght | pgdn |
+    // | crsr | prev | hint | next |  esc |
+
+    // [disable]
+    { "key": "shift+tab", "command": "-acceptAlternativeSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
+    { "key": "shift+enter", "command": "-acceptAlternativeSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
+    { "key": "escape escape", "command": "-workbench.action.exitZenMode", "when": "inZenMode" },
+    { "key": "escape", "command": "-cancelSelection", "when": "editorHasSelection && textInputFocus" },
+    { "key": "shift+escape", "command": "-cancelSelection", "when": "editorHasSelection && textInputFocus" },
+    { "key": "ctrl+`", "command": "-workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+    { "key": "ctrl+shift+p", "command": "-workbench.action.showCommands" },
+    { "key": "ctrl+0", "command": "-workbench.action.focusSideBar" },
+    { "key": "alt+1", "command": "-workbench.action.openEditorAtIndex1" },
+    { "key": "alt+2", "command": "-workbench.action.openEditorAtIndex2" },
+    { "key": "alt+3", "command": "-workbench.action.openEditorAtIndex3" },
+    { "key": "alt+4", "command": "-workbench.action.openEditorAtIndex4" },
+    { "key": "alt+5", "command": "-workbench.action.openEditorAtIndex5" },
+    { "key": "alt+6", "command": "-workbench.action.openEditorAtIndex6" },
+    { "key": "alt+7", "command": "-workbench.action.openEditorAtIndex7" },
+    { "key": "alt+8", "command": "-workbench.action.openEditorAtIndex8" },
+    { "key": "alt+9", "command": "-workbench.action.openEditorAtIndex9" },
+    { "key": "ctrl+k ctrl+1", "command": "-editor.foldLevel1", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+2", "command": "-editor.foldLevel2", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+3", "command": "-editor.foldLevel3", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+4", "command": "-editor.foldLevel4", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+5", "command": "-editor.foldLevel5", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+6", "command": "-editor.foldLevel6", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+7", "command": "-editor.foldLevel7", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+j", "command": "-editor.unfoldAll", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+w", "command": "-workbench.action.closeActiveEditor" },
+    { "key": "ctrl+j", "command": "-workbench.action.togglePanel" },
+    { "key": "ctrl+b", "command": "-workbench.action.toggleSidebarVisibility" },
+    { "key": "ctrl+k ctrl+,", "command": "-editor.createFoldingRangeFromSelection", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+k ctrl+.", "command": "-editor.removeManualFoldingRanges", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+shift+[", "command": "-editor.fold", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "ctrl+shift+]", "command": "-editor.unfold", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "shift+alt+right", "command": "-editor.action.smartSelect.grow", "when": "editorTextFocus" },
+    { "key": "shift+alt+left", "command": "-editor.action.smartSelect.shrink", "when": "editorTextFocus" },
+    { "key": "alt+a", "command": "-yo1dog.cursor-align.alignCursors", "when": "editorTextFocus" },
+    { "key": "ctrl+shift+alt+i", "command": "-bracketeer.removeBrackets" },
+    { "key": "ctrl+shift+alt+h", "command": "-bracketeer.selectBracketContent" },
+    { "key": "ctrl+shift+alt+0", "command": "-bracketeer.selectQuotesContent" },
+    { "key": "ctrl+shift+alt+'", "command": "-bracketeer.removeQuotes" },
+    { "key": "ctrl+shift+alt+;", "command": "-bracketeer.swapQuotes" },
+    { "key": "ctrl+shift+alt+u", "command": "-bracketeer.changeBracketsTo" },
+    { "key": "ctrl+shift+alt+k", "command": "-bracketeer.swapBrackets" },
+    { "key": "ctrl+shift+\\", "command": "-editor.action.jumpToBracket", "when": "editorTextFocus" },
+    { "key": "up", "command": "-showPrevParameterHint" },
+    { "key": "down", "command": "-showNextParameterHint" },
+    { "key": "alt+up", "command": "-showPrevParameterHint" },
+    { "key": "alt+down", "command": "-showNextParameterHint" },
+    { "key": "up", "command": "-selectPrevSuggestion" },
+    { "key": "down", "command": "-selectNextSuggestion" },
+    { "key": "ctrl+up", "command": "-selectPrevSuggestion" },
+    { "key": "ctrl+down", "command": "-selectNextSuggestion" },
+    { "key": "pageup", "command": "-selectPrevPageSuggestion" },
+    { "key": "ctrl+pageup", "command": "-selectPrevPageSuggestion" },
+    { "key": "pagedown", "command": "-selectNextPageSuggestion" },
+    { "key": "ctrl+pagedown", "command": "-selectNextPageSuggestion" },
+    { "key": "alt+]", "command": "-editor.action.inlineSuggest.showNext", "when": "inlineSuggestionVisible && !editorReadonly" },
+    { "key": "alt+[", "command": "-editor.action.inlineSuggest.showPrevious", "when": "inlineSuggestionVisible && !editorReadonly" },
+    { "key": "ctrl+,", "command": "-workbench.action.openSettings" },
+    { "key": "ctrl+.", "command": "-editor.action.quickFix", "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+.", "command": "-problems.action.showQuickFixes", "when": "problemFocus" },
+    { "key": "ctrl+k ctrl+d", "command": "-editor.action.moveSelectionToNextFindMatch", "when": "editorFocus" },
+    { "key": "ctrl+/", "command": "-toggleExplainMode", "when": "suggestWidgetVisible" },
+    { "key": "alt+up", "command": "-editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "alt+down", "command": "-editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+p", "command": "-workbench.action.quickOpen" },
+    { "key": "k", "command": "-list.focusUp", "when": "notebookEditorFocused && !inputFocus" },
+    { "key": "j", "command": "-list.focusDown", "when": "notebookEditorFocused && !inputFocus" },
+    { "key": "ctrl+up", "command": "-notebook.cell.focusOutOutput", "when": "notebookEditorFocused" },
+    { "key": "ctrl+down", "command": "-notebook.focusNextEditor", "when": "notebookEditorFocused && notebookOutputFocused" },
+    { "key": "ctrl+down", "command": "-notebook.cell.focusInOutput", "when": "notebookCellHasOutputs && notebookEditorFocused" },
+    { "key": "ctrl+u", "command": "-cursorUndo", "when": "textInputFocus" },
+    { "key": "ctrl+h", "command": "-editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen" },
+    { "key": "ctrl+shift+h", "command": "-workbench.action.replaceInFiles" },
+    { "key": "ctrl+\\", "command": "-workbench.action.splitEditor" },
+    { "key": "ctrl+shift+d", "command": "-workbench.view.debug", "when": "viewContainer.workbench.view.debug.enabled" },
+    { "key": "alt+q", "command": "-rewrap.rewrapComment", "when": "editorTextFocus" },
+    { "key": "ctrl+d", "command": "-editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
+    { "key": "ctrl+shift+d", "command": "-kb-macro.wrap", "when": "kb-macro.recording && viewContainer.workbench.view.debug.enabled" },
+    { "key": "ctrl+shift+=", "command": "-workbench.action.zoomIn" },
+    { "key": "ctrl+shift+`", "command": "-workbench.action.terminal.new", "when": "terminalProcessSupported || terminalWebExtensionContributedProfile" },
+    { "key": "ctrl+shift+n", "command": "-workbench.action.newWindow" },
+    { "key": "shift+alt+h", "command": "-references-view.showCallHierarchy", "when": "editorHasCallHierarchyProvider" },
+    { "key": "shift+alt+h", "command": "-editor.showCallHierarchy", "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor" },
+    { "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
+    { "key": "shift+alt+.", "command": "-editor.action.autoFix", "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/" },
+    { "key": "ctrl+.", "command": "-editor.action.quickFix", "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly" },
+    { "key": "ctrl+alt+i", "command": "-workbench.action.chat.open", "when": "!chatSetupHidden" },
+    { "key": "ctrl+alt+i", "command": "-workbench.panel.chat", "when": "workbench.panel.chat.view.copilot.active" },
+    { "key": "ctrl+shift+alt+i", "command": "-workbench.action.chat.openAgent", "when": "config.chat.agent.enabled && !chatSetupHidden" },
+    { "key": "ctrl+k i", "command": "-inlineChat.startWithCurrentLine", "when": "inlineChatHasProvider && !editorReadonly && !inlineChatVisible" },
+
+    // [escape]
+    // escape from the search widget (instead of closing it)
+    { "key": "escape", "command": "workbench.action.focusActiveEditorGroup", "when": "editorFocus && findInputFocussed" },
+    // escape from the sidebar/panel
+    { "key": "escape", "command": "workbench.action.focusActiveEditorGroup", "when": "sideBarFocus || panelFocus" },
+    // DUAL: escape
+    { "key": "alt+/", "command": "workbench.action.focusActiveEditorGroup", "when": "editorFocus && findInputFocussed" },
+    { "key": "alt+/", "command": "workbench.action.focusActiveEditorGroup", "when": "sideBarFocus || panelFocus" },
+    // alternative to alt-z for one-hand navigation
+    { "key": "alt+escape", "command": "cursorUndo", "when": "textInputFocus" },
+
+    // [command]
+    // command palette (universal functions should have special shortcut)
+    { "key": "ctrl+escape", "command": "workbench.action.showCommands" },
+    // DUAL: ctrl+escape
+    { "key": "ctrl+alt+/", "command": "workbench.action.showCommands" },
+
+    // [zoom]
+    { "key": "ctrl+=", "command": "editor.action.fontZoomIn" },
+    { "key": "ctrl+-", "command": "editor.action.fontZoomOut" },
+    { "key": "ctrl+0", "command": "editor.action.fontZoomReset" },
+
+    // [tab]
+    { "key": "ctrl+1", "command": "workbench.action.openEditorAtIndex1" },
+    { "key": "ctrl+2", "command": "workbench.action.openEditorAtIndex2" },
+    { "key": "ctrl+3", "command": "workbench.action.openEditorAtIndex3" },
+    { "key": "ctrl+4", "command": "workbench.action.openEditorAtIndex4" },
+    { "key": "ctrl+5", "command": "workbench.action.openEditorAtIndex5" },
+    { "key": "ctrl+6", "command": "workbench.action.openEditorAtIndex6" },
+    { "key": "ctrl+7", "command": "workbench.action.openEditorAtIndex7" },
+    { "key": "ctrl+8", "command": "workbench.action.openEditorAtIndex8" },
+    { "key": "ctrl+9", "command": "workbench.action.openEditorAtIndex9" },
+
+    // [code folding]
+    { "key": "alt+1", "command": "editor.foldLevel1", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+2", "command": "editor.foldLevel2", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+3", "command": "editor.foldLevel3", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+4", "command": "editor.foldLevel4", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+5", "command": "editor.foldLevel5", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+6", "command": "editor.foldLevel6", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+7", "command": "editor.foldLevel7", "when": "editorTextFocus && foldingEnabled" },
+    { "key": "alt+0", "command": "editor.unfoldAll", "when": "editorTextFocus && foldingEnabled" },
+
+    // [smart select]
+    // jump between bracket
+    { "key": "alt+h", "command": "editor.action.jumpToBracket" },
+    // select between bracket (actually is growing selection)
+    { "key": "shift+alt+h", "command": "editor.action.smartSelect.grow", "when": "editorTextFocus" },
+
+    // [code folding]
+    // toggle fold
+    { "key": "alt+'", "command": "editor.toggleFold", "when": "editorTextFocus && foldingEnabled && !editorHasSelection" },
+    // fold (it is needed because one cannot further fold code when cursor is on a folded line)
+    { "key": "shift+alt+'", "command": "editor.fold", "when": "editorTextFocus && foldingEnabled && !editorHasSelection" },
+
+    // [hint]
+    // show hover then toggle focus on hover
+    { "key": "alt+,", "command": "editor.action.showHover", "when": "editorTextFocus" },
+    { "key": "alt+,", "command": "workbench.action.focusActiveEditorGroup", "when": "editorHoverFocused" },
+    // DUAL: escape, make it easier to blur the hover
+    { "key": "alt+/", "command": "workbench.action.focusActiveEditorGroup", "when": "editorHoverFocused" },
+    // show parameter hint
+    { "key": "shift+alt+,", "command": "editor.action.triggerParameterHints", "when": "editorTextFocus && editorHasSignatureHelpProvider && !parameterHintsVisible" },
+    // show next parameter hint
+    { "key": "shift+alt+,", "command": "showNextParameterHint", "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible" },
+    // DUAL: escape, make it easier to dismiss the parameter hints
+    { "key": "alt+/", "command": "closeParameterHints", "when": "editorTextFocus && parameterHintsVisible" },
+
+    // [suggestion]
+    // show suggestions then toggle details
+    { "key": "ctrl+alt+,", "command": "editor.action.triggerSuggest", "when": "textInputFocus && editorHasCompletionItemProvider && !suggestWidgetVisible" },
+    { "key": "ctrl+alt+,", "command": "toggleSuggestionDetails", "when": "textInputFocus && suggestWidgetVisible" },
+    // DUAL: escape, make it easier to dismiss the suggestions
+    { "key": "alt+/", "command": "hideSuggestWidget", "when": "textInputFocus && suggestWidgetVisible" },
+    // show code action
+    { "key": "ctrl+shift+alt+,", "command": "problems.action.showQuickFixes", "when": "problemFocus" },
+    { "key": "ctrl+shift+alt+,", "command": "editor.action.quickFix", "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
+    // DUAL: escape, make it easier to dismiss the code action
+    { "key": "alt+/", "command": "workbench.action.focusActiveEditorGroup", "when": "codeActionMenuVisible" },
+
+    // [dropdown]
+    // select prev/next suggestion, use tab to accept
+    { "key": "ctrl+alt+m", "command": "selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+    { "key": "ctrl+alt+.", "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+    // select prev/next code action, use enter to accept
+    { "key": "ctrl+alt+m", "command": "selectPrevCodeAction", "when": "codeActionMenuVisible" },
+    { "key": "ctrl+alt+.", "command": "selectNextCodeAction", "when": "codeActionMenuVisible" },
+
+    // [marker]
+    // goto next/prev marker/ref/change
+    { "key": "alt+.", "command": "editor.action.marker.next", "when": "editorFocus && !inReferenceSearchEditor" },
+    { "key": "alt+m", "command": "editor.action.marker.prev", "when": "editorFocus && !inReferenceSearchEditor" },
+    { "key": "alt+m", "command": "goToPreviousReferenceFromEmbeddedEditor", "when": "inReferenceSearchEditor" },
+    { "key": "alt+.", "command": "goToNextReferenceFromEmbeddedEditor", "when": "inReferenceSearchEditor" },
+    { "key": "alt+.", "command": "workbench.action.compareEditor.nextChange", "when": "textCompareEditorVisible" },
+    { "key": "alt+m", "command": "workbench.action.compareEditor.previousChange", "when": "textCompareEditorVisible" },
+    // { "key": "alt+.", "command": "editor.action.dirtydiff.next", "when": "editorTextFocus && !textCompareEditorActive" },
+    // { "key": "alt+m", "command": "editor.action.dirtydiff.previous", "when": "editorTextFocus && !textCompareEditorActive" },
+
+    // [multicursor]
+    // goto next/prev match (don't use search bar if there is no selection) (EXT: findWordAtCursor)
+    { "key": "alt+n", "command": "editor.action.moveSelectionToNextFindMatch", "when": "editorHasMultipleSelections && editorFocus" },
+    { "key": "alt+n", "command": "findWordAtCursor.next", "when": "!editorHasMultipleSelections && editorFocus" },
+    { "key": "shift+alt+n", "command": "editor.action.moveSelectionToPreviousFindMatch", "when": "editorHasMultipleSelections && editorFocus" },
+    { "key": "shift+alt+n", "command": "findWordAtCursor.previous", "when": "!editorHasMultipleSelections && editorFocus" },
+    // add cursor on match and goto next/prev match
+    { "key": "ctrl+alt+n", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
+    { "key": "shift+ctrl+alt+n", "command": "editor.action.addSelectionToPreviousFindMatch", "when": "editorFocus" },
+
+    // ============================================= TAB ===============================================
+
+    // [tab]
+    // switch between tab (are designed for one-hand navigation)
+    { "key": "alt+pageup", "command": "workbench.action.previousEditorInGroup" },
+    { "key": "alt+pagedown", "command": "workbench.action.nextEditorInGroup" },
+    // switch between tab (for compatibility)
+    { "key": "ctrl+pageup", "command": "workbench.action.previousEditorInGroup" },
+    { "key": "ctrl+pagedown", "command": "workbench.action.nextEditorInGroup" },
+    // // DUAL: ctrl+pageup/pagedown
+    // { "key": "ctrl+alt+p", "command": "workbench.action.previousEditorInGroup" },
+    // { "key": "ctrl+alt+;", "command": "workbench.action.nextEditorInGroup" },
+
+    // move tab
+    { "key": "shift+alt+pageup", "command": "workbench.action.moveEditorLeftInGroup" },
+    { "key": "shift+alt+pagedown", "command": "workbench.action.moveEditorRightInGroup" },
+    // move tab (for compatibility)
+    { "key": "shift+ctrl+pageup", "command": "workbench.action.moveEditorLeftInGroup" },
+    { "key": "shift+ctrl+pagedown", "command": "workbench.action.moveEditorRightInGroup" },
+    // // DUAL: shift+ctrl+pageup/pagedown
+    // { "key": "shift+ctrl+alt+p", "command": "workbench.action.moveEditorLeftInGroup" },
+    // { "key": "shift+ctrl+alt+;", "command": "workbench.action.moveEditorRightInGroup" },
+
+    // switch between sidebar/panel (are designed for one-hand navigation)
+    { "key": "alt+pageup", "command": "workbench.action.previousPanelView", "when": "panelFocus" },
+    { "key": "alt+pageup", "command": "workbench.action.previousSideBarView", "when": "sideBarFocus" },
+    { "key": "alt+pageup", "command": "workbench.action.previousPanelView", "when": "terminalFocus || terminalEditorFocus" },
+    { "key": "alt+pagedown", "command": "workbench.action.nextPanelView", "when": "panelFocus" },
+    { "key": "alt+pagedown", "command": "workbench.action.nextSideBarView", "when": "sideBarFocus" },
+    { "key": "alt+pagedown", "command": "workbench.action.nextPanelView", "when": "terminalFocus || terminalEditorFocus" },
+    // switch between sidebar/panel (for compatibility)
+    { "key": "ctrl+pageup", "command": "workbench.action.previousPanelView", "when": "panelFocus" },
+    { "key": "ctrl+pageup", "command": "workbench.action.previousSideBarView", "when": "sideBarFocus" },
+    { "key": "ctrl+pageup", "command": "workbench.action.previousPanelView", "when": "terminalFocus || terminalEditorFocus" },
+    { "key": "ctrl+pagedown", "command": "workbench.action.nextPanelView", "when": "panelFocus" },
+    { "key": "ctrl+pagedown", "command": "workbench.action.nextSideBarView", "when": "sideBarFocus" },
+    { "key": "ctrl+pagedown", "command": "workbench.action.nextPanelView", "when": "terminalFocus || terminalEditorFocus" },
+
+    // [sidebar]
+    // toggle sidebar
+    { "key": "alt+y", "command": "workbench.action.focusSideBar", "when": "!sideBarFocus" },
+    { "key": "alt+y", "command": "workbench.action.closeSidebar", "when": "sideBarFocus" },
+    // toggle panel (one should disable system shortcut)
+    { "key": "alt+`", "command": "workbench.action.focusPanel", "when": "!panelFocus" },
+    { "key": "alt+`", "command": "workbench.action.closePanel", "when": "panelFocus" },
+    { "key": "alt+`", "command": "workbench.action.terminal.toggleTerminal", "when": "terminalFocus" },
+    // // toggle panel (use me if system shortcut cannot be disabled)
+    // { "key": "shift+alt+y", "command": "workbench.action.focusPanel", "when": "!panelFocus" },
+    // { "key": "shift+alt+y", "command": "workbench.action.closePanel", "when": "panelFocus" },
+    // { "key": "shift+alt+y", "command": "workbench.action.terminal.toggleTerminal", "when": "terminalFocus" },
+
+    // [group]
+    // switch between group
+    { "key": "alt+End", "command": "workbench.action.focusNextGroup", "when": "multipleEditorGroups" },
+    { "key": "alt+Home", "command": "workbench.action.focusPreviousGroup", "when": "multipleEditorGroups" },
+    { "key": "alt+End", "command": "diffEditor.switchSide", "when": "!multipleEditorGroups && inDiffEditor && !diffEditorInlineMode" },
+    { "key": "alt+Home", "command": "diffEditor.switchSide", "when": "!multipleEditorGroups && inDiffEditor && !diffEditorInlineMode" },
+    // split group
+    { "key": "ctrl+y ctrl+y", "command": "workbench.action.splitEditor", "when": "editorTextFocus" },
+    { "key": "ctrl+y shift+ctrl+y", "command": "workbench.action.splitEditorDown", "when": "editorTextFocus" },
+    // close group
+    { "key": "ctrl+y ctrl+w", "command": "workbench.action.closeGroup", "when": "editorTextFocus" },
+
+    // ============================================= MOTION ===============================================
+
+    // [cursor motion]
+    // motion
+    { "key": "up", "command": "cursorUp", "when": "textInputFocus" },
+    { "key": "left", "command": "cursorLeft", "when": "textInputFocus" },
+    { "key": "down", "command": "cursorDown", "when": "textInputFocus" },
+    { "key": "right", "command": "cursorRight", "when": "textInputFocus" },
+    { "key": "home", "command": "cursorHome", "when": "textInputFocus" },
+    { "key": "end", "command": "cursorEnd", "when": "textInputFocus" },
+    { "key": "pageup", "command": "cursorPageUp", "when": "textInputFocus" },
+    { "key": "pagedown", "command": "cursorPageDown", "when": "textInputFocus" },
+    // DUAL
+    { "key": "alt+i", "command": "cursorUp", "when": "textInputFocus" },
+    { "key": "alt+j", "command": "cursorLeft", "when": "textInputFocus" },
+    { "key": "alt+k", "command": "cursorDown", "when": "textInputFocus" },
+    { "key": "alt+l", "command": "cursorRight", "when": "textInputFocus" },
+    { "key": "alt+u", "command": "cursorHome", "when": "textInputFocus" },
+    { "key": "alt+o", "command": "cursorEnd", "when": "textInputFocus" },
+    { "key": "alt+p", "command": "cursorPageUp", "when": "textInputFocus" },
+    { "key": "alt+;", "command": "cursorPageDown", "when": "textInputFocus" },
+
+    // select
+    { "key": "shift+up", "command": "cursorUpSelect", "when": "textInputFocus" },
+    { "key": "shift+left", "command": "cursorLeftSelect", "when": "textInputFocus" },
+    { "key": "shift+down", "command": "cursorDownSelect", "when": "textInputFocus" },
+    { "key": "shift+right", "command": "cursorRightSelect", "when": "textInputFocus" },
+    { "key": "shift+home", "command": "cursorHomeSelect", "when": "textInputFocus" },
+    { "key": "shift+end", "command": "cursorEndSelect", "when": "textInputFocus" },
+    { "key": "shift+pageup", "command": "cursorPageUpSelect", "when": "textInputFocus" },
+    { "key": "shift+pagedown", "command": "cursorPageDownSelect", "when": "textInputFocus" },
+    // DUAL
+    { "key": "shift+alt+i", "command": "cursorUpSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+j", "command": "cursorLeftSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+k", "command": "cursorDownSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+l", "command": "cursorRightSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+u", "command": "cursorHomeSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+o", "command": "cursorEndSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+p", "command": "cursorPageUpSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+;", "command": "cursorPageDownSelect", "when": "textInputFocus" },
+
+    // word/paragraph motion
+    { "key": "ctrl+left", "command": "cursorWordLeft", "when": "textInputFocus" },
+    { "key": "ctrl+right", "command": "cursorWordRight", "when": "textInputFocus" },
+    { "key": "ctrl+up", "command": "cursorMove", "args": {"to": "prevBlankLine"}, "when": "textInputFocus" },
+    { "key": "ctrl+down", "command": "cursorMove", "args": {"to": "nextBlankLine"}, "when": "textInputFocus" },
+    { "key": "ctrl+Home", "command": "cursorTop", "when": "textInputFocus" },
+    { "key": "ctrl+End", "command": "cursorBottom", "when": "textInputFocus" },
+    // DUAL
+    { "key": "ctrl+alt+j", "command": "cursorWordLeft", "when": "textInputFocus" },
+    { "key": "ctrl+alt+l", "command": "cursorWordRight", "when": "textInputFocus" },
+    { "key": "ctrl+alt+i", "command": "cursorMove", "args": {"to": "prevBlankLine"}, "when": "textInputFocus" },
+    { "key": "ctrl+alt+k", "command": "cursorMove", "args": {"to": "nextBlankLine"}, "when": "textInputFocus" },
+    { "key": "ctrl+alt+u", "command": "cursorTop", "when": "textInputFocus" },
+    { "key": "ctrl+alt+o", "command": "cursorBottom", "when": "textInputFocus" },
+
+    // word/paragraph select
+    { "key": "shift+ctrl+left", "command": "cursorWordLeftSelect", "when": "textInputFocus" },
+    { "key": "shift+ctrl+right", "command": "cursorWordRightSelect", "when": "textInputFocus" },
+    { "key": "shift+ctrl+up", "command": "cursorMove", "args": {"to": "prevBlankLine", "select": true}, "when": "textInputFocus" },
+    { "key": "shift+ctrl+down", "command": "cursorMove", "args": {"to": "nextBlankLine", "select": true}, "when": "textInputFocus" },
+    { "key": "shift+ctrl+Home", "command": "cursorTopSelect", "when": "textInputFocus" },
+    { "key": "ctrl+shift+End", "command": "cursorBottomSelect", "when": "textInputFocus" },
+    // DUAL
+    { "key": "shift+ctrl+alt+j", "command": "cursorWordLeftSelect", "when": "textInputFocus" },
+    { "key": "shift+ctrl+alt+l", "command": "cursorWordRightSelect", "when": "textInputFocus" },
+    { "key": "shift+ctrl+alt+i", "command": "cursorMove", "args": {"to": "prevBlankLine", "select": true}, "when": "textInputFocus" },
+    { "key": "shift+ctrl+alt+k", "command": "cursorMove", "args": {"to": "nextBlankLine", "select": true}, "when": "textInputFocus" },
+    { "key": "ctrl+shift+alt+u", "command": "cursorTopSelect", "when": "textInputFocus" },
+    { "key": "ctrl+shift+alt+o", "command": "cursorBottomSelect", "when": "textInputFocus" },
+
+    // [drag]
+    { "key": "ctrl+shift+i", "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+shift+k", "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+shift+j", "command": "editor.action.moveCarretLeftAction", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+shift+l", "command": "editor.action.moveCarretRightAction", "when": "editorTextFocus && !editorReadonly" },
+
+    // [scroll]
+    { "key": "alt+up", "command": "editorScroll", "args": {"to": "up", "by": "wrappedLine", "value": 3} },
+    { "key": "alt+down", "command": "editorScroll", "args": {"to": "down", "by": "wrappedLine", "value": 3} },
+    { "key": "ctrl+alt+up", "command": "editorScroll", "args": {"to": "up", "by": "halfPage", "value": 1} },
+    { "key": "ctrl+alt+down", "command": "editorScroll", "args": {"to": "down", "by": "halfPage", "value": 1} },
+    { "key": "alt+left", "command": "scrollLeft" },
+    { "key": "alt+right", "command": "scrollRight" },
+
+    // [hint]
+    { "key": "alt+i", "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
+    { "key": "alt+k", "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
+    { "key": "alt+i", "command": "selectPrevCodeAction", "when": "codeActionMenuVisible" },
+    { "key": "alt+k", "command": "selectNextCodeAction", "when": "codeActionMenuVisible" },
+    { "key": "alt+i", "command": "history.showPrevious", "when": "historyNavigationBackwardsEnabled && historyNavigationWidget && !suggestWidgetVisible" },
+    { "key": "alt+k", "command": "history.showNext", "when": "historyNavigationForwardsEnabled && historyNavigationWidget && !suggestWidgetVisible" },
+    { "key": "alt+i", "command": "interactive.history.previous", "when": "!suggestWidgetVisible && resourceScheme == 'vscode-interactive' && interactiveInputCursorAtBoundary != 'bottom' && interactiveInputCursorAtBoundary != 'none'" },
+    { "key": "alt+k", "command": "interactive.history.next", "when": "!suggestWidgetVisible && resourceScheme == 'vscode-interactive' && interactiveInputCursorAtBoundary != 'none' && interactiveInputCursorAtBoundary != 'top'" },
+
+    // [hover]
+    { "key": "alt+i", "command": "editor.action.scrollUpHover", "when": "editorHoverFocused" },
+    { "key": "alt+k", "command": "editor.action.scrollDownHover", "when": "editorHoverFocused" },
+    { "key": "alt+j", "command": "editor.action.scrollLeftHover", "when": "editorHoverFocused" },
+    { "key": "alt+l", "command": "editor.action.scrollRightHover", "when": "editorHoverFocused" },
+    { "key": "alt+p", "command": "editor.action.pageUpHover", "when": "editorHoverFocused" },
+    { "key": "alt+;", "command": "editor.action.pageDownHover", "when": "editorHoverFocused" },
+
+    // [list]
+    { "key": "alt+i", "command": "list.focusUp", "when": "listFocus && !inputFocus" },
+    { "key": "alt+k", "command": "list.focusDown", "when": "listFocus && !inputFocus" },
+    { "key": "alt+j", "command": "list.collapse", "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus" },
+    { "key": "alt+l", "command": "list.expand", "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus" },
+    { "key": "alt+u", "command": "list.focusFirst", "when": "listFocus && !inputFocus" },
+    { "key": "alt+o", "command": "list.focusLast", "when": "listFocus && !inputFocus" },
+    { "key": "alt+p", "command": "list.focusPageUp", "when": "listFocus && !inputFocus" },
+    { "key": "alt+;", "command": "list.focusPageDown", "when": "listFocus && !inputFocus" },
+
+    { "key": "shift+alt+i", "command": "list.expandSelectionUp", "when": "listFocus && listSupportsMultiselect && !inputFocus" },
+    { "key": "shift+alt+k", "command": "list.expandSelectionDown", "when": "listFocus && listSupportsMultiselect && !inputFocus" },
+
+    { "key": "ctrl+alt+j", "command": "list.collapseAll", "when": "listFocus && !inputFocus" },
+
+    { "key": "alt+up", "command": "list.scrollUp", "when": "listFocus && !inputFocus" },
+    { "key": "alt+down", "command": "list.scrollDown", "when": "listFocus && !inputFocus" },
+    // { "key": "alt+pageup", "command": "list.scrollUp", "when": "listFocus && !inputFocus" },
+    // { "key": "alt+pagedown", "command": "list.scrollDown", "when": "listFocus && !inputFocus" },
+    { "key": "ctrl+alt+p", "command": "list.scrollUp", "when": "listFocus && !inputFocus" },
+    { "key": "ctrl+alt+;", "command": "list.scrollDown", "when": "listFocus && !inputFocus" },
+
+    // [breadcrumbs]
+    { "key": "ctrl+alt+j", "command": "breadcrumbs.focusPrevious", "when": "breadcrumbsActive && breadcrumbsVisible" },
+    { "key": "ctrl+alt+j", "command": "breadcrumbs.focusPreviousWithPicker", "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus" },
+    { "key": "ctrl+alt+l", "command": "breadcrumbs.focusNext", "when": "breadcrumbsActive && breadcrumbsVisible" },
+    { "key": "ctrl+alt+l", "command": "breadcrumbs.focusNextWithPicker", "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus" },
+
+    // [notebook]
+    { "key": "alt+i", "command": "notebook.focusPreviousEditor", "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'" },
+    { "key": "alt+k", "command": "notebook.focusNextEditor", "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'" },
+    { "key": "alt+j", "command": "notebook.fold", "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'" },
+    { "key": "alt+l", "command": "notebook.unfold", "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'" },
+
+    // =========================================================================================
+
+    // [undo/redo]
+    { "key": "ctrl+z", "command": "undo" },
+    { "key": "shift+ctrl+z", "command": "redo" },
+    { "key": "alt+z", "command": "cursorUndo", "when": "textInputFocus" },
+    { "key": "shift+alt+z", "command": "cursorRedo", "when": "textInputFocus" },
+    { "key": "ctrl+alt+z", "command": "workbench.action.navigateBack" },
+    { "key": "shift+ctrl+alt+z", "command": "workbench.action.navigateForward" },
+
+    // [goto/peek]
+    // toggle breadcrumbs
+    { "key": "alt+g", "command": "breadcrumbs.focusAndSelect", "when": "breadcrumbsPossible" },
+    { "key": "alt+g", "command": "workbench.action.focusActiveEditorGroup", "when": "breadcrumbsActive" },
+    // goto line/symbol
+    { "key": "ctrl+g", "command": "workbench.action.gotoLine" },
+    { "key": "ctrl+shift+g", "command": "workbench.action.showAllSymbols" },
+    // peek definition then reference (EXT: multiCommand)
+    { "key": "ctrl+alt+g", "command": "editor.action.peekDefinition", "when": "editorFocus && editorHasReferenceProvider && !referenceSearchVisible" },
+    { "key": "ctrl+alt+g", "command": "multiCommand.triggerReferenceSearch", "when": "editorFocus && editorHasReferenceProvider && referenceSearchVisible" },
+    // toggle focus of peek
+    { "key": "alt+g", "command": "togglePeekWidgetFocus", "when": "editorFocus && referenceSearchVisible" },
+
+    // [search]
+    { "key": "ctrl+f", "command": "actions.find", "when": "!inKeybindings && (editorFocus || editorIsOpen)" },
+    { "key": "ctrl+shift+f", "command": "workbench.action.findInFiles" },
+    { "key": "alt+f", "command": "editor.action.nextMatchFindAction", "when": "editorFocus" },
+    { "key": "shift+alt+f", "command": "editor.action.previousMatchFindAction", "when": "editorFocus" },
+    // search reference
+    { "key": "ctrl+alt+f", "command": "references-view.findReferences" },
+    // search editor
+    { "key": "alt+enter", "command": "multiCommand.openSearchResultInEditor", "when": "hasSearchResult && searchViewletFocus" },
+    { "key": "ctrl+s", "command": "searchEditorApplyChanges.apply", "when": "inSearchEditor" },
+    { "key": "alt+f", "command": "search.action.focusNextSearchResult", "when": "searchViewletVisible || inSearchEditor" },
+    { "key": "shift+alt+f", "command": "search.action.focusPreviousSearchResult", "when": "searchViewletVisible || inSearchEditor" },
+
+    // [others]
+    // { "key": "ctrl+i", "command": "editor.action.goToSelectionAnchor", "when": "editorFocus" },
+    { "key": "ctrl+i", "command": "editor.action.insertCursorAtEndOfEachLineSelected", "when": "editorTextFocus" },
+    { "key": "ctrl+j", "command": "editor.action.joinLines", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+l", "command": "expandLineSelection", "when": "textInputFocus" },
+    { "key": "ctrl+o", "command": "workbench.action.quickOpen", "when": "editorFocus" },
+    { "key": "ctrl+d", "command": "editor.action.duplicateSelection" },
+    // new editor
+    { "key": "ctrl+t", "command": "workbench.action.files.newUntitledFile" },
+    // reopen editor
+    { "key": "ctrl+shift+t", "command": "workbench.action.reopenClosedEditor" },
+    // close editor (don't close editor on blur)
+    { "key": "ctrl+w", "command": "workbench.action.closeActiveEditor", "when": "editorFocus" },
+    // focus terminal (ctrl+alt+t: open ubuntu terminal)
+    { "key": "alt+t", "command": "workbench.action.terminal.focus", "when": "terminal.active" },
+    // new terminal
+    { "key": "shift+alt+t", "command": "workbench.action.terminal.new", "when": "terminalProcessSupported || terminalWebExtensionContributedProfile" },
+
+    // [others using extensions]
+    // delete paired brackets (why is this not a default capability?)
+    { "key": "shift+ctrl+backspace", "command": "bracketeer.removeBrackets" },
+    { "key": "ctrl+shift+d", "command": "extension.transpose", "when": "editorFocus" },
+    { "key": "shift+ctrl+v", "command": "clipring.pasteRingItem", "when": "editorFocus && editorHasSelection" },
+    { "key": "shift+ctrl+v", "command": "multiCommand.pasteRingItemWithSelection", "when": "editorFocus && !editorHasSelection" },
+    // { "key": "tab", "command": "yo1dog.cursor-align.alignCursors", "when": "editorTextFocus && !editorReadonly && editorHasMultipleSelections && editorHasSelection" },
+
+    // [script]
+    { "key": "ctrl+e", "command": "scriptsel.runLastExecutedScript" },
+    { "key": "ctrl+shift+e", "command": "scriptsel.runScript" },
+    { "key": "ctrl+alt+e", "command": "scriptsel.editScript" },
+]
